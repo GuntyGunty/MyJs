@@ -1,0 +1,252 @@
+ .body {
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+
+.block__toggle {
+	display: flex;
+	align-items: center;
+}
+
+.block__button {
+	background-color: inherit;
+	border-width: 0;
+	font-size: 0;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+	margin-right: 10px;
+}
+
+.block__svg {
+	fill: #00a4e4;
+	transition: fill 0.2s;
+}
+
+.block__button:hover .block__svg,
+.block__button:focus .block__svg {
+	fill: blue;
+}
+
+.block__button:active .block__svg {
+	fill: darkblue;
+}
+
+.block__header {
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+	color: #00a4e4;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1em;
+}
+
+.block__body {
+	padding: 20px;
+}
+.drop-list__inner {
+	display: flex;
+	flex-basis: 100%;
+}
+
+.drop-list__input-block {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.drop-list__input {
+	cursor: pointer;
+	flex-grow: 1;
+	box-sizing: border-box;
+	border-width: 0;
+	padding: 5px;
+	flex-basis: 100%;
+}
+
+.drop-list__label--input {
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.drop-list__label--input:hover ~ .drop-list__input {
+	border-bottom: none;
+}
+
+.drop-list__label--input:hover ~ .drop-list__input:hover + .drop-list__button {
+	border-bottom: none;
+}
+
+.drop-list__label--input:hover ~ .drop-list__input:hover + .drop-list__button .drop-list__svg {
+	fill: #00a4e4;
+}
+
+.drop-list__input:hover,
+.drop-list__input:focus {
+	outline: none;
+	border-bottom: 1px solid #00a4e4;
+}
+
+.drop-list__input:hover + .drop-list__button,
+.drop-list__input:focus + .drop-list__button {
+	border-bottom: 1px solid #00a4e4;
+}
+
+
+.drop-list__button:active ~ .drop-list__svg {
+	filter: brightness(90%);
+}
+
+.drop-list__svg {
+	fill: #00a4e4;
+	transition: fill 0.2s;
+}
+
+	.drop-list__svg:hover,
+	.drop-list__svg:focus {
+		fill: blue;
+	}
+
+	.drop-list__svg:active {
+		fill: #00a4e4;
+		filter: brightness(70%);
+	}
+
+.drop-list__input:hover + .drop-list__button .drop-list__svg, .drop-list__input:focus + .drop-list__button .drop-list__svg {
+	fill: blue;
+	transition: fill 0.2s;
+}
+
+.drop-list__button:active .drop-list__svg {
+	fill: #00a4e4;
+	filter: brightness(70%);
+}
+
+.drop-list__input:focus + .drop-list__button {
+	border-bottom: 1px solid #00a4e4;
+}
+
+.drop-list__button {
+	background-color: inherit;
+	border-width: 0;
+	font-size: 0;
+	padding: 6px;
+	cursor: pointer;
+	outline: inherit;
+	background-color: #fff;
+}
+
+.drop-list__list {
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(170, 170, 170, 0.5);
+	max-height: 400px;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+	margin-top: 2px;
+	list-style: none;
+	display: none;
+}
+
+.drop-list__list--open {
+	animation: moveopen 0.6s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	display: block;
+	max-height: 168px;
+}
+
+.drop-list__list--close {
+	animation: moveclose 0.2s linear;
+	max-height: 0;
+	display: block;
+}
+
+
+@keyframes moveopen {
+	0% {
+		display: none;
+		height: 0;
+	}
+
+	1% {
+		display: block;
+	}
+
+	100% {
+		height: 168px;
+	}
+}
+
+@keyframes moveclose {
+	0% {
+		display: block;
+		max-height: 168px;
+	}
+
+	1% {
+		display: none;
+	}
+
+	100% {
+		max-height: 0;
+	}
+}
+
+.drop-list__label--list {
+	padding: 5px;
+	padding-left: 20px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+	.drop-list__label--list:hover {
+		background-color: #00a4e4;
+		color: white;
+	}
+
+	.drop-list__label--list:focus {
+		background-color: #00a4e4;
+		color: white;
+	}
+
+.drop-list__radio {
+	display: none;
+}
+
+	.drop-list__radio:checked ~ .drop-list__label--list {
+		background-color: lightgray;
+	}
+
+		.drop-list__radio:checked ~ .drop-list__label--list:focus {
+			color: black;
+		}
+
+	.drop-list__radio:focus ~ .drop-list__label--list {
+		background-color: #00a4e4;
+		color: white;
+	}
+
+.no-js {
+	font-size: 16px;
+	display: block;
+	position: static;
+	height: auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+}
+

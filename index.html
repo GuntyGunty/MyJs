@@ -1,0 +1,198 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+	<svg style="display: none;">
+		<symbol id="icon-open" viewBox="85 85 10 10">
+			<g><polygon points="95,89 91,89 91,85 89,85 89,89 85,89 85,91 89,91 89,95 91,95 91,91 95,91" /></g>
+		</symbol>
+		<symbol id="icon-open-list" viewBox="45 225 10 10">
+			<g>
+				<polygon points="58,228 50,235 42,228 42,225 50,232 58,225" />
+			</g>
+		</symbol>
+	</svg>
+
+	<main class="main">
+		<section class="block block--1">
+			<div class="block__toggle">
+				<button class="block__button">
+					<svg class="block__svg" width="15" height="15">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-open"></use>
+					</svg>
+					Раскрыть блок
+				</button>
+				<h2 class="block__header">Простой список</h2>
+			</div>
+			<div class="block__body">
+				<div class="drop-list">
+					<div class="drop-list__input-block">
+						<label class="drop-list__label-title drop-list__label--input" for="input_data">Введите данные</label>
+						<div class="drop-list__inner">
+							<input class="drop-list__input" id="input_data" type="text" name="name" placeholder="Введите текст">
+							<button class="drop-list__button drop-list__button--open">
+								<svg class="drop-list__svg drop-list__svg--open" width="25" height="13">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-open-list"></use>
+								</svg>
+								Открыть список
+							</button>
+						</div>
+					</div>
+					<ul class="drop-list__list no-js">
+						<li class="drop-list__item">
+							<input class="drop-list__radio" id="radio1" type="radio" name="drop_list_1" />
+							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio1">Первый вариант</label>
+						</li>
+						<li class="drop-list__item">
+							<input class="drop-list__radio" id="radio2" type="radio" name="drop_list_1" />
+							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio2">Второй вариант</label>
+						</li>
+						<li class="drop-list__item">
+							<input class="drop-list__radio" id="radio3" type="radio" name="drop_list_1" />
+							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio3">Третий вариант</label>
+						</li>
+						<li class="drop-list__item">
+							<input class="drop-list__radio" id="radio4" type="radio" name="drop_list_1" />
+							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio4">Четвертый вариант</label>
+						</li>
+						<li class="drop-list__item">
+							<input class="drop-list__radio" id="radio5" type="radio" name="drop_list_1" />
+							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio5">Пятый вариант</label>
+						</li>
+						<li class="drop-list__item">
+							<input class="drop-list__radio" id="radio6" type="radio" name="drop_list_1" />
+							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio6">Шестой вариант</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!--<section class="forms-wrapper">
+		<h1 class="forms-title">Списки</h1>
+		<div class="lists">
+			<div class="list-wrap">
+				<div class="inner">
+					<button class="open-list-btn">
+						<svg width="20" height="20" fill="red">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-open"></use>
+						</svg>
+						Кнопка
+					</button>
+					<p class="forms-inner-title">Простой список</p>
+				</div>
+
+				<div class="container">
+					<div class="togglers">
+						<label class="search" for="search">Сторка поиска</label>
+						<input class="data-input" id="search" type="text" placeholder="Сюда писать текст">
+						<button class="list-btn">
+							Кнопка
+							<svg width="20" height="20" fill="red">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-open-list></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="list list--none" tabindex="-1">
+						<input class="indicator__select-checkbox" id="indicator1" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator1" tabindex="0">
+							Первый вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator2" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator2" tabindex="1">
+							Второй вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator3" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator3" tabindex="2">
+							Третий вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator4" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator4" tabindex="3">
+							Четвертый вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator5" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator5" tabindex="4">
+							Пятый вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator6" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator6" tabindex="4">
+							Шестой вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator7" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator7" tabindex="4">
+							Седьмой вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator8" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator8" tabindex="4">
+							Восьмой вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator9" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator9" tabindex="4">
+							Девятый вариант
+							<span></span>
+						</label>
+						<input class="indicator__select-checkbox" id="indicator10" type="radio" name="array" />
+						<label class="indicator__select-label list-item" for="indicator10" tabindex="4">
+							Десятый вариант
+							<span></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="list-wrap">
+				<div class="inner">
+					<button class="open-list-btn">
+						<svg width="10px" height="10px" fill="#00a4e4; class="form-svg-plus" viewBox="85 85 10 10">
+							<use xlink:href="#plus-mini_1_"></use>
+						</svg>
+						Кнопка
+					</button>
+					<p class="forms-inner-title">Простой список с возможностью выбрать несколько варинатов</p>
+				</div>
+				<div class="container">
+					<div class="togglers">
+						<label class="search" for="search">Сторка поиска</label>
+						<input class="data-input" id="search" type="text" placeholder="Сюда писать текст" />
+						<button class="list-btn">
+							<svg width="20px" height="20px" class="forms__select-svg" viewBox="40 220 20 20">
+								<use xlink:href="#scroll-down_1_"></use>
+							</svg>
+							Кнопка
+						</button>
+					</div>
+					<ul class="list list--none">
+						<input class="indicator__select-checkbox" id="indicator2" type="checkbox" />
+						<label class="indicator__select-label" for="indicator2">
+							Первый
+							<span class="indicator__select-span"></span>
+						</label>
+						<li class="list-item" value="N2">Второй вариант</li>
+						<li class="list-item" value="N3">Третий вариант</li>
+						<li class="list-item" value="N4">Четвертый вариант</li>
+						<li class="list-item" value="N5">Пятый вариантПятый вариантПятый вариантПятый вариантПятый вариантПятый вариантПятый вариантПятый вариантПятый вариантПятый вариант</li>
+						<li class="list-item" value="N6">Шестой вариант</li>
+						<li class="list-item" value="N7">Седьмой вариант</li>
+						<li class="list-item" value="N8">Восьмой вариант</li>
+						<li class="list-item" value="N9">Девятый вариант</li>
+						<li class="list-item" value="N10">Десятый вариант</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>-->
+	<script src="scripts/main.js"></script>
+</body>
+</html>
