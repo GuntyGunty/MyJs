@@ -5,10 +5,10 @@ import fastSelect from './fast-select.js';
 export default (keyCode, list, openListName, closeListName, radioItems, inputEl, labelItems, indicator) => {
 	switch (keyCode) {
 		case 40:
-			keyListEvents(radioItems, inputEl, labelItems, `down`);
+			keyListEvents(list, radioItems, inputEl, labelItems, `down`);
 			break;
 		case 38:
-			keyListEvents(radioItems, inputEl, labelItems, `up`);
+			keyListEvents(list, radioItems, inputEl, labelItems, `up`);
 			break;
 		case 27:
 			closeEsc(list, openListName, closeListName, radioItems, inputEl, labelItems, `noopen`);

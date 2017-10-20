@@ -1,4 +1,5 @@
-﻿export default (inputEl, labelItems) => {
+﻿export default (list, radioItems, inputEl, labelItems) => {
+	console.log(labelItems);
 	Array.from(labelItems, (item) => {
 		const boldItems = document.querySelectorAll(`.boldItem`);
 		const itemText = item.textContent;

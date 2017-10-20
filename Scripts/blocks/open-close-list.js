@@ -24,7 +24,7 @@ export default (list, openListName, closeListName, radioItems, inputEl, labelIte
 	if (list.classList.contains(openListName) && indicator !== `noclose`) {
 		list.classList.remove(openListName);
 		list.classList.add(closeListName);
-		removeBold(inputEl, labelItems);
+		removeBold(list, radioItems, inputEl, labelItems);
 		document.removeEventListener(`keydown`, keyDown);
 	} else if (indicator !== `noopen`) {
 		list.classList.add(openListName);

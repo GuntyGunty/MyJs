@@ -1,10 +1,11 @@
 ﻿import valueCheck from './value-check.js';
-import openCloseList from './open-close-list';
+import openCloseList from './open-close-list.js';
+import addListeners from './add-listeners.js';
 
 export default (btn, radioItems, dropList, list, openListName, closeListName, inputEl, labelItems, indicator) => {
 	const btnFunc = () => {
 		openCloseList(list, openListName, closeListName, radioItems, inputEl, labelItems, indicator);
 	}
-
-	btn.addEventListener(`click`, btnFunc);
+	addListeners(btn, radioItems, dropList, list, openListName, closeListName, inputEl, labelItems, indicator, btnFunc);
+	//btn.addEventListener(`click`, btnFunc);
 }

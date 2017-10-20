@@ -8,6 +8,7 @@ import changeValue from './change-input-value.js';
 import keyListEvents from './key-listevents.js';
 import listSearch from './list-search.js';
 import removeBold from './remove-highlighting.js';
+import addAllListeners from './add-listeners.js';
 
 export default () => {
 	const dropLists = document.querySelectorAll(`.drop-list`);
@@ -28,11 +29,8 @@ export default () => {
 
 		clickOutBlock(labelContainer, dropList, list, openListName, closeListName, radioItems, inputEl, labelItems);
 
-		listSearch(list, inputEl, labelItems);
+		listSearch(list, radioItems, inputEl, labelItems);
 
-		Array.from(radioItems, (radioEl) => {
-			const radioLabelText = radioEl.nextElementSibling.innerText;
-			closeSimpleListClick(radioLabelText, radioEl, list, openListName, closeListName, radioItems, inputEl, labelItems);
-		});
+		closeSimpleListClick(list, openListName, closeListName, radioItems, inputEl, labelItems);
 	});
 }

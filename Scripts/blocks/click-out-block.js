@@ -1,7 +1,9 @@
 ﻿import openCloseList from './open-close-list';
+import addListeners from './add-listeners.js';
 
 export default (labelContainer, dropList, list, openListName, closeListName, radioItems, inputEl, labelItems, indicator) => {
 	const focusOutFunc = () => {
+		console.log(`оно работает`);
 		let eventTarget = event.target;
 		if (eventTarget === labelContainer) {
 			openCloseList(list, openListName, closeListName, radioItems, inputEl, labelItems);
@@ -16,5 +18,6 @@ export default (labelContainer, dropList, list, openListName, closeListName, rad
 			}
 		}
 	}
-	document.addEventListener('click', focusOutFunc);
+	addListeners(dropList, list, openListName, closeListName, inputEl, labelItems, indicator, ``, ``, focusOutFunc, ``);
+	//document.addEventListener('click', focusOutFunc);
 }
