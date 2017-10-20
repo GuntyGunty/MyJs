@@ -2,14 +2,14 @@
 import removeBold from './remove-highlighting.js';
 import delEl from './delete-el.js';
 
-export default (list, radioItems, inputEl, labelItems) => {
+export default (btn, radioItems, dropList, list, openListName, closeListName, inputEl, labelItems) => {
 	inputEl.addEventListener(`keyup`, (event) => {
 		if (event.keyCode === 40 || event.keyCode === 38) {
 			console.log(`Снять подкрашивание при клавишах вверх/вниз`);
 		} else {
 			inputEl.style.color = (`red`);
 			const str = inputEl.value;
-			delEl(list, radioItems, inputEl, labelItems);
+			delEl(btn, radioItems, dropList, list, openListName, closeListName, inputEl, labelItems);
 			Array.from(labelItems, (item) => {
 				const itemText = item.textContent;
 				if (itemText.match(new RegExp(str, `ig`))) {

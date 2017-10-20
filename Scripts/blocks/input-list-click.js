@@ -7,6 +7,7 @@ export default (list, openListName, closeListName, radioItems, inputEl, labelIte
 		//valueCheck(radioItems, inputEl);
 		openCloseList(list, openListName, closeListName, radioItems, inputEl, labelItems, "noclose");
 	};
-	addListeners(``, ``, ``, list, openListName, closeListName, inputEl, labelItems, indicator, ``, inputFunc, ``, ``, ``);
+
+	addListeners(``, ``, ``, list, openListName, closeListName, inputEl, labelItems, ``, ``, inputFunc, ``, ``, ``);
 	//inputEl.addEventListener(`click`, inputFunc);
 };

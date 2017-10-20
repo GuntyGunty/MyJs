@@ -29,7 +29,7 @@ export default () => {
 
 		clickOutBlock(labelContainer, dropList, list, openListName, closeListName, radioItems, inputEl, labelItems);
 
-		listSearch(list, radioItems, inputEl, labelItems);
+		listSearch(btn, radioItems, dropList, list, openListName, closeListName, inputEl, labelItems);
 
 		closeSimpleListClick(list, openListName, closeListName, radioItems, inputEl, labelItems);
 	});

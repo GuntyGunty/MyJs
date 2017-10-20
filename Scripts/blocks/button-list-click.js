@@ -6,6 +6,6 @@ export default (btn, radioItems, dropList, list, openListName, closeListName, in
 	const btnFunc = () => {
 		openCloseList(list, openListName, closeListName, radioItems, inputEl, labelItems, indicator);
 	}
-	addListeners(btn, radioItems, dropList, list, openListName, closeListName, inputEl, labelItems, indicator, btnFunc);
+	addListeners(btn, radioItems, dropList, list, openListName, closeListName, inputEl, labelItems, btnFunc);
 	//btn.addEventListener(`click`, btnFunc);
 }
