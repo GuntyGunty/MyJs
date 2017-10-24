@@ -18,7 +18,7 @@
 
 	<main class="main">
 		<section class="block block--1">
-			<div class="block__toggle">
+			<!--<div class="block__toggle">
 				<button class="block__button">
 					<svg class="block__svg" width="15" height="15">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-open"></use>
@@ -40,8 +40,19 @@
 								Открыть список
 							</button>
 						</div>
-					</div>
-					<ul class="drop-list__list no-js">
+					</div>-->
+
+					<label>Лабель</label>
+					<select class="drop-list__list no-js" id="list__data" multiple form="form" name="name">
+						<option class="drop-list__item" value="First">Один</option>
+						<option class="drop-list__item" value="Second">Два</option>
+						<option class="drop-list__item" value="Third">Три</option>
+						<option class="drop-list__item" value="Fourth">Четыре</option>
+					</select>
+					<form class="form" id="form"></form>
+
+
+					<!--<ul class="drop-list__list no-js">
 						<li class="drop-list__item">
 							<input class="drop-list__radio" id="radio1" type="radio" name="drop_list_1" />
 							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio1">Первый вариант</label>
@@ -66,7 +77,7 @@
 							<input class="drop-list__radio" id="radio6" type="radio" name="drop_list_1" />
 							<label class="drop-list__label drop-list__label--list" tabindex="0" for="radio6">Шестой вариант</label>
 						</li>
-					</ul>
+					</ul>-->
 				</div>
 			</div>
 		</section>
@@ -193,6 +204,7 @@
 			</div>
 		</div>
 	</section>-->
-	<script src="scripts/main.js"></script>
+	<!--<script src="scripts/main.js"></script>-->
+	<script src="scripts/script.js"></script>
 </body>
 </html>
