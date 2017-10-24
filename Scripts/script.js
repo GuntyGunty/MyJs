@@ -4,7 +4,9 @@
 ////addDefaultListener();
 //noJs();
 
+//const block = document.querySelector(`.block`).innerHTML;
 
+//console.log(block);
 const selects = document.querySelectorAll(".drop-list__list");
 const options = document.querySelectorAll(".drop-list__item");
 const itemObject = {};
@@ -42,13 +44,17 @@ const renderListItems = () => {
 				`<ul class="drop-list__list no-js" id="list__id__${myObject.selects.id}" >
 				<li class="drop-list__item">
 					<input class="drop-list__radio" id="radio_id_${myObject.selects.id}_1" type="${myObject.selects.selectType}" name="drop_list_${myObject.selects.id}" />
-					<label class="drop-list__label drop-list__label--list" for="radio_id__1">dfdfdfdf</label>
+					<label class="drop-list__label drop-list__label--list" for="radio_id__1">${myObject.selects.options.text}</label>
 				</li>
 			</ul>`
 			);
 	/*	})*/
 }
-document.getElementsByClassName(`.block`).innerHTML = renderListItems();
+
+
+document.querySelector(`.block`).innerHTML = renderListItems();
+
+//block = renderListItems();
 
 //${myObject.selects.options.value }
 //${myObject.selects.options.text }
